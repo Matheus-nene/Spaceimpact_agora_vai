@@ -1,0 +1,101 @@
+@keyframes move1{
+    0%{
+        top: 80px;
+        left: 100px;
+    }
+    50%{
+        top: 70px;
+        left: 200px;
+    }
+    100%{
+        top: 80px;
+        left: 100px;
+    }
+}
+@keyframes move2{
+    0%{
+        bottom: 100px;
+        right: 100px;
+    }
+    50%{
+        bottom: 100px;
+        right: 200px;
+    }
+    100%{
+        bottom: 100px;
+        right: 100px;
+    }
+}
+@keyframes move3{
+    0%{
+        bottom: 100px;
+        left: 300px;
+    }
+    50%{
+        bottom: 110px;
+        left: 200px;
+    }
+    100%{
+        bottom: 100px;
+        left: 300px;
+    }
+}
+@keyframes move4{
+    0%{
+        top: 100px;
+        right: 300px;
+    }
+    50%{
+        top: 120px;
+        right: 200px;
+    }
+    100%{
+        top: 100px;
+        right: 300px;
+    }
+}
+@keyframes meteoro{
+    0%{
+        top: 0%;
+        right: 0%;
+    }
+    
+    100%{
+        top:100%;
+        right: 200%;
+    }
+}
+.p{
+    position: absolute;
+}
+
+.p1{
+    top: 80px;
+    left: 100px;
+    z-index: -1;
+    -webkit-animation: move1 30s infinite;
+}
+.p2{
+    bottom: 100px;
+    right: 100px;
+    z-index: -2;
+    -webkit-animation: move2 30s infinite;
+}
+.p3{
+    bottom: 100px;
+    left: 300px;
+    z-index: -3;
+    -webkit-animation: move3 30s infinite;
+}
+.p4{
+    top: 100px;
+    right: 300px;
+    z-index: -4;
+    -webkit-animation: move4 30s infinite;
+}
+.p5{
+    top: -100px;
+    right: -100px;
+    z-index: -5;
+    -webkit-animation: meteoro 4s;
+}
