@@ -2,7 +2,9 @@ body{
     background-color: #171717;
     color: white;
     font-family: 'Baloo Bhai', cursive;
-    overflow-y: auto;
+    /*overflow-y: auto;*/
+    overflow-x: hidden !important;
+
 }
 h1{
     font-size: 70px;
