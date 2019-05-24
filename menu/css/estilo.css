@@ -39,7 +39,7 @@ a:active{
     top: 0px;
     left: 0px;
     z-index: -5;
-    background-repeat: repeat-x; 
+    /*background-repeat: repeat-x; */
 }
 .center{
     text-align: center;

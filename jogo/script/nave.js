@@ -15,19 +15,23 @@ function Nave(context, teclado, imagem, imgExplosao) {
 Nave.prototype = {
    atualizar: function() {
       var incremento = 
-          this.velocidade * this.animacao.decorrido / 1000;
+          this.velocidade * this.animacao.decorrido / 700;
       
-      if (this.teclado.pressionada(SETA_ESQUERDA) || this.teclado.pressionada(SETA_ESQUERDA2) && this.x > 0)
+      if ((this.teclado.pressionada(SETA_ESQUERDA) || this.teclado.pressionada(SETA_ESQUERDA2)) && this.x > 0){
          this.x -= incremento;
+      }
          
-      if (this.teclado.pressionada(SETA_DIREITA) || this.teclado.pressionada(SETA_DIREITA2) && this.x < this.context.canvas.width - 36)
+      if ((this.teclado.pressionada(SETA_DIREITA) || this.teclado.pressionada(SETA_DIREITA2))&& this.x < this.context.canvas.width - 36){
          this.x += incremento;
+      }
          
-      if (this.teclado.pressionada(SETA_ACIMA) || this.teclado.pressionada(SETA_ACIMA2) && this.y > 0)
+      if (this.teclado.pressionada(SETA_ACIMA) || this.teclado.pressionada(SETA_ACIMA2) && this.y > 0){
          this.y -= incremento;
+      }
          
-      if (this.teclado.pressionada(SETA_ABAIXO) || this.teclado.pressionada(SETA_ABAIXO2) && this.y < this.context.canvas.height - 48)
+      if (this.teclado.pressionada(SETA_ABAIXO) || this.teclado.pressionada(SETA_ABAIXO2) && this.y < this.context.canvas.height - 48){
          this.y += incremento;
+      }
    },
    desenhar: function() {
       if (this.teclado.pressionada(SETA_ESQUERDA) || this.teclado.pressionada(SETA_ESQUERDA2))
@@ -64,10 +68,8 @@ Nave.prototype = {
          this.colisor.excluirSprite(this);
          this.colisor.excluirSprite(outro);
          
-         var exp1 = new Explosao(this.context, this.imgExplosao,
-                                 this.x, this.y);
-         var exp2 = new Explosao(this.context, this.imgExplosao,
-                                 outro.x, outro.y);
+         var exp1 = new Explosao(this.context, this.imgExplosao, this.x, this.y);
+         var exp2 = new Explosao(this.context, this.imgExplosao, outro.x, outro.y);
          
          this.animacao.novoSprite(exp1);
          this.animacao.novoSprite(exp2);

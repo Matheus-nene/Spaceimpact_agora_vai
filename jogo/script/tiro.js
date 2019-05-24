@@ -21,7 +21,7 @@ function Tiro(context, nave) {
 Tiro.prototype = {
    atualizar: function() {
       this.y -= 
-         this.velocidade * this.animacao.decorrido / 1000;
+         this.velocidade * this.animacao.decorrido / 300;
       
       // Excluir o tiro quando sumir da tela
       if (this.y < -this.altura) {

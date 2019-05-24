@@ -128,7 +128,7 @@ function novoOvni() {
 
     // Mínimo: 500; máximo: 1000
     ovni.velocidade =
-        Math.floor(250 + Math.random() * (500 - 250 + 1));
+        Math.floor(500 + Math.random() * (500 - 250 + 1));
 
     // Mínimo: 0; máximo: largura do canvas - largura do inimigo   
     ovni.x =
