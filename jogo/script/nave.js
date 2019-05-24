@@ -25,11 +25,11 @@ Nave.prototype = {
          this.x += incremento;
       }
          
-      if (this.teclado.pressionada(SETA_ACIMA) || this.teclado.pressionada(SETA_ACIMA2) && this.y > 0){
+      if ((this.teclado.pressionada(SETA_ACIMA) || this.teclado.pressionada(SETA_ACIMA2)) && this.y > 0){
          this.y -= incremento;
       }
          
-      if (this.teclado.pressionada(SETA_ABAIXO) || this.teclado.pressionada(SETA_ABAIXO2) && this.y < this.context.canvas.height - 48){
+      if ((this.teclado.pressionada(SETA_ABAIXO) || this.teclado.pressionada(SETA_ABAIXO2)) && this.y < this.context.canvas.height - 48){
          this.y += incremento;
       }
    },
