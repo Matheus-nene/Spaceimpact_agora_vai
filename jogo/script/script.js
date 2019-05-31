@@ -17,7 +17,7 @@ function carregarImagens() {
         estrelas: 'estrelinha1.png',
         nuvens: 'estrelinha1.png',
         nave: '75x112.png',
-        ovni: 'inimigo01.png',
+        ovni: '5050verde.png',
         explosao: 'explosao.png'
     };
 
@@ -59,8 +59,7 @@ function iniciarObjetos() {
     espaco = new Fundo(context, imagens.espaco);
     estrelas = new Fundo(context, imagens.estrelas);
     nuvens = new Fundo(context, imagens.nuvens);
-    nave = new Nave(context, teclado, imagens.nave,
-        imagens.explosao);
+    nave = new Nave(context, teclado, imagens.nave, imagens.explosao);
     painel = new Painel(context, nave);
 
     // Ligações entre objetos
@@ -98,11 +97,17 @@ function configuracoesIniciais() {
     // Pontuação
     colisor.aoColidir = function (o1, o2) {
         // Tiro com Ovni
-        if ((o1 instanceof Tiro && o2 instanceof Ovni) ||
-            (o1 instanceof Ovni && o2 instanceof Tiro))
+        if ((o1 instanceof Tiro && o2 instanceof Ovni) || (o1 instanceof Ovni && o2 instanceof Tiro)){
             painel.pontuacao += 100;
+        }
+        if(painel.pontuacao == 500){
+            pauseTrocaDeFase1();
+        } else if (painel.pontuacao == 700){
+            pauseTrocaDeFase2();
+        }
     }
 }
+
 
 function criacaoInimigos() {
     criadorInimigos = {
@@ -112,7 +117,7 @@ function criacaoInimigos() {
             var agora = new Date().getTime();
             var decorrido = agora - this.ultimoOvni;
 
-            if (decorrido > 500) {
+            if (decorrido > 350) {
                 novoOvni();
                 this.ultimoOvni = agora;
             }
@@ -160,6 +165,41 @@ function pausarJogo() {
         ativarTiro(true);
     }
 }
+function pauseTrocaDeFase1(){
+    if(animacao.ligado){
+        animacao.desligar();
+        ativarTiro(false);
+        context.save();
+        context.fillStyle = 'white';
+        context.strokeStyle = 'red';
+        context.font = '50px sans-serif';
+        context.fillText("Segunda Fase", 90, 200);
+        context.restore();
+    }
+    else{
+        criadorInimigos.ultimoOvni = new Date().getTime();
+        animacao.ligar();
+        ativarTiro(true);
+    }
+}
+
+function pauseTrocaDeFase2(){
+    if(animacao.ligado){
+        animacao.desligar();
+        ativarTiro(false);
+        context.save();
+        context.fillStyle = 'white';
+        context.strokeStyle = 'red';
+        context.font = '50px sans-serif';
+        context.fillText("Terceira Fase", 90, 200);
+        context.restore();
+    }
+    else{
+        criadorInimigos.ultimoOvni = new Date().getTime();
+        animacao.ligar();
+        ativarTiro(true);
+    }
+}
 
 function ativarTiro(ativar) {
     if (ativar) {
@@ -179,12 +219,16 @@ function carregarMusicas() {
     musicaAcao.loop = true;
 }
 
+function mostrarLinkMenu(){
+    document.getElementById('link_menu').style.display = 'block';
+}
+
 function mostrarLinkJogar() {
-    document.getElementById('link_jogar').style.display =
-        'block';
+    document.getElementById('link_jogar').style.display = 'block';
 }
 
 function iniciarJogo() {
+    
     criadorInimigos.ultimoOvni = new Date().getTime();
 
     // Tiro
@@ -217,7 +261,7 @@ function gameOver() {
     // Texto "Game Over"
     context.save();
     context.fillStyle = 'white';
-    context.strokeStyle = 'black';
+    context.strokeStyle = 'red';
     context.font = '70px sans-serif';
     context.fillText("GAME OVER", 40, 200);
     context.strokeText("GAME OVER", 40, 200);
@@ -225,6 +269,7 @@ function gameOver() {
 
     // Volta o link "Jogar"
     mostrarLinkJogar();
+    mostrarLinkMenu();
 
     // Restaurar as condições da nave
     nave.vidasExtras = 3;

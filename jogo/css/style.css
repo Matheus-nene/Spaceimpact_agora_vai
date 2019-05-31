@@ -25,10 +25,22 @@ body{
     left: 45%;
     top: 400px;
 
-    /* A imagem do botão é 72x72, descontamos os paddings */
-    width: 52px;
-    height: 26px;
-    padding: 23px 10px;
+ }
+ #link_menu{
+    display: none;
+
+    color: yellow;
+
+    font-size: 20px;
+    font-family: sans-serif;
+
+    text-decoration: none;
+    text-shadow: 2px 2px 5px black;
+
+    position: absolute;
+    left: 42%;
+    top: 450px;
+
  }
 #canvas_animacao{
     position: relative;
