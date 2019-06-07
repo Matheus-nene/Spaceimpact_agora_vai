@@ -105,14 +105,13 @@ function configuracoesIniciais() {
         } else if (painel.pontuacao == 700){
             // pauseTrocaDeFase2();
         }
-        chamarPontuacao();
-        return painel.pontuacao;
+        
+        var pontuacaoTotal = painel.pontuacao;
+
+        return pontuacaoTotal;
     }
 }
-function chamarPontuacao(){
-    colisor.aoColidir();
-    console.log(painel.pontuacao);
-}
+
 
 function criacaoInimigos() {
     criadorInimigos = {
@@ -122,7 +121,7 @@ function criacaoInimigos() {
             var agora = new Date().getTime();
             var decorrido = agora - this.ultimoOvni;
 
-            if (decorrido > 350) {
+            if (decorrido > 200) {
                 novoOvni();
                 this.ultimoOvni = agora;
             }
