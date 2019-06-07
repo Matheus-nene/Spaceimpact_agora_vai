@@ -101,13 +101,18 @@ function configuracoesIniciais() {
             painel.pontuacao += 100;
         }
         if(painel.pontuacao == 500){
-            pauseTrocaDeFase1();
+            // pauseTrocaDeFase1();
         } else if (painel.pontuacao == 700){
-            pauseTrocaDeFase2();
+            // pauseTrocaDeFase2();
         }
+        chamarPontuacao();
+        return painel.pontuacao;
     }
 }
-
+function chamarPontuacao(){
+    colisor.aoColidir();
+    console.log(painel.pontuacao);
+}
 
 function criacaoInimigos() {
     criadorInimigos = {
@@ -238,6 +243,7 @@ function iniciarJogo() {
     teclado.disparou(PAUSE, pausarJogo);
 
     document.getElementById('link_jogar').style.display = 'none';
+    document.getElementById('link_menu').style.display = 'none';
 
     painel.pontuacao = 0;
     musicaAcao.play();

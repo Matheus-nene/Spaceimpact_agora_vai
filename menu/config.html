@@ -22,12 +22,14 @@
         <div class="ajusteAmarelo center">
             <h3>Volume</h3>
             <br>
-            <h4>Jogo</h4>
-            <input type="range" min="0" max="100" class="slider" id="SOMjogo">
-            <h4>Tiro</h4>
-            <input type="range" min="0" max="100" class="slider" id="SOMtiro">
-            <h4>Explosão</h4>
-            <input type="range" min="0" max="100" class="slider" id="SOMexplosao">
+            <div class="slidercontainer">
+                <h4>Jogo</h4>
+                <input type="range" min="0" max="1" step="0.1" class="slider" id="somJogo">
+                <h4>Tiro</h4>
+                <input type="range" min="0" max="1" step="0.1" class="slider" id="somTiro">
+                <h4>Explosão</h4>
+                <input type="range" min="0" max="1" step="0.1" class="slider" id="somExplosao">
+            </div>
             <h3 class="topSpace">Idioma</h3>
             <form>
                 <div class="checkB">
@@ -61,6 +63,18 @@
     <img src="./img/3.png" alt="" class="p p3">
     <img src="./img/4.png" alt="" class="p p4">
     <img src="./img/asteroide.png" alt="" class="p p5" width="42" height="42">
+
+    <script src="../jogo/script/script.js"></script>
+    <script src="../jogo/script/animacao.js"></script>
+    <script src="../jogo/script/teclado.js"></script>
+    <script src="../jogo/script/colisor.js"></script>
+    <script src="../jogo/script/fundo.js"></script>
+    <script src="../jogo/script/nave.js"></script>
+    <script src="../jogo/script/inimigo01.js"></script>
+    <script src="../jogo/script/tiro.js"></script>
+    <script src="../jogo/script/spritesheet.js"></script>
+    <script src="../jogo/script/explosao.js"></script>
+    <script src="../jogo/script/painel.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
