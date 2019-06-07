@@ -237,6 +237,18 @@ function iniciarJogo() {
     animacao.ligar();
 }
 
+function postarPontuacao(){
+
+    context.save();
+    context.fillStyle = 'white';
+    context.strokeStyle = 'red';
+    context.font = '30px Baloo Bhai';
+    context.fillText("SUA PONTUACAO: " , 70, 300);
+    context.strokeText("SUA PONTUACAO: " , 70, 300);
+    context.restore();
+
+}
+
 function gameOver() {
 
     ativarTiro(false);
@@ -258,6 +270,7 @@ function gameOver() {
 
     mostrarLinkJogar();
     mostrarLinkMenu();
+    postarPontuacao();
 
     nave.vidasExtras = 3;
     nave.posicionar();

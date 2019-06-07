@@ -29,7 +29,5 @@ Painel.prototype = {
       ctx.font = '18px Baloo Bhai';
       ctx.fillText(this.pontuacao, 100, 27);
       ctx.restore();   
-
-      // document.querySelector('.postarPontuacao').innerHTML = this.pontuacao;
    }
 }
