@@ -9,7 +9,7 @@ Painel.prototype = {
       
    },
    desenhar: function() {
-      // Reduz o desenho pela metade
+
       this.context.scale(0.5, 0.5);
       
       var x = 20;
@@ -19,18 +19,17 @@ Painel.prototype = {
          this.spritesheet.desenhar(x, y);
          x += 40;
       }
-      
-      // Torna a dobrar
+
       this.context.scale(2, 2);
-      
-      // Para facilitar um pouco...
+
       var ctx = this.context;
       
-      // Pontuação
       ctx.save();
       ctx.fillStyle = 'white';
-      ctx.font = '18px sans-serif';
+      ctx.font = '18px Baloo Bhai';
       ctx.fillText(this.pontuacao, 100, 27);
       ctx.restore();   
+
+      // document.querySelector('.postarPontuacao').innerHTML = this.pontuacao;
    }
 }

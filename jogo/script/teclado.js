@@ -14,22 +14,18 @@ var ENTER = 13;
 function Teclado(elemento) {
    this.elemento = elemento;
 
-   // Array de teclas pressionadas
    this.pressionadas = [];
 
-   // Array de teclas disparadas
    this.disparadas = [];
 
-   // Funções de disparo registradas
    this.funcoesDisparo = [];
 
    var teclado = this;
 
    elemento.addEventListener('keydown', function(evento) {
-      var tecla = evento.keyCode;  // Tornando mais legível ;)
+      var tecla = evento.keyCode; 
       teclado.pressionadas[tecla] = true;
 
-      // Disparar somente se for o primeiro keydown da tecla
       if (teclado.funcoesDisparo[tecla] && !teclado.disparadas[tecla]) {
 
           teclado.disparadas[tecla] = true;

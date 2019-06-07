@@ -6,11 +6,10 @@ SOM_TIRO.load();
 function Tiro(context, nave) {
    this.context = context;
    this.nave = nave;
-   
-   // Posicionar o tiro no bico da nave
+
    this.largura = 3;
    this.altura = 15;   
-   this.x = nave.x + 18;  // 36 / 2
+   this.x = nave.x + 18; 
    this.y = nave.y - this.altura;
    this.velocidade = 400;
    
@@ -23,7 +22,6 @@ Tiro.prototype = {
       this.y -= 
          this.velocidade * this.animacao.decorrido / 300;
       
-      // Excluir o tiro quando sumir da tela
       if (this.y < -this.altura) {
          this.animacao.excluirSprite(this);
          this.colisor.excluirSprite(this);

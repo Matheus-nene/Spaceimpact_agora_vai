@@ -5,22 +5,17 @@ body{
     overflow-x: hidden;
 }
 #link_jogar {
-    /* Inicia oculto */
+
     display: none;
  
-    /* Cores e fundo */
-    color: yellow;
-    background: url(img/botao-jogar.png);
+    color: white;
        
-    /* Fonte */
     font-size: 20px;
     font-family: sans-serif;
     
-    /* Sem sublinhado e com sombra */
     text-decoration: none;
     text-shadow: 2px 2px 5px black;
-       
-    /* Posicionamento */
+
     position: absolute;
     left: 45%;
     top: 400px;
@@ -29,7 +24,7 @@ body{
  #link_menu{
     display: none;
 
-    color: yellow;
+    color: white;
 
     font-size: 20px;
     font-family: sans-serif;

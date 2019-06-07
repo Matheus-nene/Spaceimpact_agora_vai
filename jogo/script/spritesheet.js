@@ -12,10 +12,8 @@ Spritesheet.prototype = {
    proximoQuadro: function() {
       var agora = new Date().getTime(); 
 
-      // Se ainda não tem último tempo medido 
       if (! this.ultimoTempo) this.ultimoTempo = agora; 
 
-      // Já é hora de mudar de coluna? 
       if (agora - this.ultimoTempo < this.intervalo) return;
 
       if (this.coluna < this.numColunas - 1) {
@@ -24,11 +22,9 @@ Spritesheet.prototype = {
       else {
          this.coluna = 0;
          
-         // Avisar que acabou um ciclo!
          if (this.fimDoCiclo) this.fimDoCiclo();
       }
 
-      // Guardar hora da última mudança
       this.ultimoTempo = agora;
    },
    desenhar: function(x, y) {

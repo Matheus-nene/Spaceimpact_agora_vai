@@ -22,7 +22,6 @@ Ovni.prototype = {
       ctx.drawImage(img, this.x, this.y, img.width, img.height);
    },
    retangulosColisao: function() {
-      // Estes valores vão sendo ajustados aos poucos
       var rets = 
       [ 
          {x: this.x+20, y: this.y+1, largura: 25, altura: 10},
@@ -34,15 +33,13 @@ Ovni.prototype = {
       return rets;
    },
    colidiuCom: function(outro) {
-      // Se colidiu com um Tiro, os dois desaparecem
       if (outro instanceof Tiro) {
          this.animacao.excluirSprite(this);
          this.colisor.excluirSprite(this);
          this.animacao.excluirSprite(outro);
          this.colisor.excluirSprite(outro);
          
-         var explosao = new Explosao(this.context, this.imgExplosao, 
-                                     this.x, this.y);
+         var explosao = new Explosao(this.context, this.imgExplosao, this.x, this.y);
          this.animacao.novoSprite(explosao);
       }
    }
