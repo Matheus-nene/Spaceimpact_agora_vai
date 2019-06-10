@@ -7,7 +7,10 @@ h1{
 }
 .footer{
     text-align: center;
-    color: rgb(150, 150, 153);
+    color: white;
+}
+.footer a:active, a:hover, a:link, a:visited{
+    color: white;
 }
 .fundinho{
     background-color: #E9ECEF;
@@ -25,6 +28,10 @@ h1{
     height: 150px;
 }
 .btnColor{
-    background-color: #7ACAC2;
+    background-color: rgb(31, 109, 101);
     color: white;  
+}
+
+.btnColor a:link, a:hover, a:visited, a:active{
+    color: white;
 }
