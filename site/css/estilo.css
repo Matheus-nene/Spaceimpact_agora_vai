@@ -35,3 +35,7 @@ h1{
 .btnColor a:link, a:hover, a:visited, a:active{
     color: white;
 }
+.devs{
+    text-align: center;
+    margin: 0px 50px 0px 50px;
+}
