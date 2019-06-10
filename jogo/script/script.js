@@ -84,6 +84,7 @@ function configuracoesIniciais() {
     nave.acabaramVidas = function () {
         animacao.desligar();
         gameOver();
+
     }
 
     colisor.aoColidir = function (o1, o2) {
@@ -96,10 +97,6 @@ function configuracoesIniciais() {
         } else if (painel.pontuacao == 700){
             // pauseTrocaDeFase2();
         }
-        
-        var pontuacaoTotal = painel.pontuacao;
-
-        return pontuacaoTotal;
     }
 }
 

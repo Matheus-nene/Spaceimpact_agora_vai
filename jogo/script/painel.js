@@ -4,6 +4,7 @@ function Painel(context, nave) {
    this.spritesheet = new Spritesheet(context, nave.imagem, 3, 2);
    this.pontuacao = 0;
 }
+
 Painel.prototype = {
    atualizar: function() {
       
@@ -28,6 +29,6 @@ Painel.prototype = {
       ctx.fillStyle = 'white';
       ctx.font = '18px Baloo Bhai';
       ctx.fillText(this.pontuacao, 100, 27);
-      ctx.restore();   
+      ctx.restore(); 
    }
 }
