@@ -238,17 +238,17 @@ function iniciarJogoSegundaFase() {
     animacao.ligar();
 }
 
-function postarPontuacao(){
+// function postarPontuacao(){
 
-    context.save();
-    context.fillStyle = 'white';
-    context.strokeStyle = 'red';
-    context.font = '30px Baloo Bhai';
-    context.fillText("SUA PONTUACAO: " , 70, 300);
-    context.strokeText("SUA PONTUACAO: " , 70, 300);
-    context.restore();
+//     context.save();
+//     context.fillStyle = 'white';
+//     context.strokeStyle = 'red';
+//     context.font = '30px Baloo Bhai';
+//     context.fillText("SUA PONTUACAO: " , 70, 300);
+//     context.strokeText("SUA PONTUACAO: " , 70, 300);
+//     context.restore();
 
-}
+// }
 
 function gameOver() {
 
@@ -271,7 +271,7 @@ function gameOver() {
 
     // mostrarLinkJogar();
     mostrarLinkMenu();
-    postarPontuacao();
+    // postarPontuacao();
 
     nave.vidasExtras = 3;
     nave.posicionar();
