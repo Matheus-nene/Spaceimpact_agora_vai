@@ -271,9 +271,9 @@ function gameOver() {
     context.strokeText("GAME OVER", 40, 200);
     context.restore();
 
-    mostrarLinkJogar();
+    // mostrarLinkJogar();
     mostrarLinkMenu();
-    postarPontuacao();
+    // postarPontuacao();
 
     nave.vidasExtras = 3;
     nave.posicionar();

@@ -100,8 +100,6 @@ function configuracoesIniciais() {
     }
 }
 
-console.log(aoColidir = pontuacaoTotal);
-
 
 function criacaoInimigos() {
     criadorInimigos = {
@@ -271,7 +269,7 @@ function gameOver() {
     context.strokeText("GAME OVER", 40, 200);
     context.restore();
 
-    mostrarLinkJogar();
+    // mostrarLinkJogar();
     mostrarLinkMenu();
     postarPontuacao();
 
