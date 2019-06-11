@@ -66,3 +66,10 @@ a:active{
 .topSpace{
     padding-top: 20px;
 }
+@keyframes blink {
+	0% {opacity: 0}
+	49%{opacity: 0}
+	50% {opacity: 1}
+}
+
+blink{animation: blink 1s infinite;}

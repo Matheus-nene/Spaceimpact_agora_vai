@@ -37,6 +37,36 @@ body{
     top: 450px;
 
  }
+ #link_segundafase{
+    display: none;
+
+    color: white;
+
+    font-size: 20px;
+    font-family: sans-serif;
+
+    text-decoration: none;
+    text-shadow: 2px 2px 5px black;
+
+    position: absolute;
+    left: 42%;
+    top: 450px;
+ }
+#link_terceirafase{
+    display: none;
+
+    color: white;
+
+    font-size: 20px;
+    font-family: sans-serif;
+
+    text-decoration: none;
+    text-shadow: 2px 2px 5px black;
+
+    position: absolute;
+    left: 42%;
+    top: 450px;
+}
 #canvas_animacao{
     position: relative;
     left: 30%;

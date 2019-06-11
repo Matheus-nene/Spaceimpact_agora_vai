@@ -15,7 +15,7 @@ function carregarImagens() {
         estrelas: 'estrelinha1.png',
         nuvens: 'estrelinha1.png',
         nave: '75x112.png',
-        ovni: '5050verde.png',
+        ovni: '5050rosa.png',
         explosao: 'explosao.png'
     };
 
@@ -93,7 +93,7 @@ function configuracoesIniciais() {
             painel.pontuacao += 100;
         }
         if(painel.pontuacao == 2500){
-            pauseTrocaDeFase1();
+            // pauseTrocaDeFase1();
         } else if (painel.pontuacao == 5000){
             // pauseTrocaDeFase2();
         }
@@ -111,7 +111,7 @@ function criacaoInimigos() {
             var agora = new Date().getTime();
             var decorrido = agora - this.ultimoOvni;
 
-            if (decorrido > 350) {
+            if (decorrido > 200) {
                 novoOvni();
                 this.ultimoOvni = agora;
             }
@@ -126,7 +126,7 @@ function novoOvni() {
     var ovni = new Ovni(context, imgOvni, imagens.explosao);
 
     ovni.velocidade =
-        Math.floor(300 + Math.random() * (300 - 150 + 1));
+        Math.floor(500 + Math.random() * (500 - 250 + 1));
  
     ovni.x =
         Math.floor(Math.random() *
@@ -167,7 +167,6 @@ function pauseTrocaDeFase1(){
         context.fillText("Segunda Fase", 90, 200);
         context.restore();
         mostrarLinkSegundaFase();
-
     }
     else{
         criadorInimigos.ultimoOvni = new Date().getTime();
@@ -211,6 +210,7 @@ function carregarMusicas() {
     musicaAcao.volume = 0.8;
     musicaAcao.loop = true;
 }
+
 function mostrarLinkSegundaFase(){
     document.getElementById('link_segundafase').style.display = 'block';
 }
@@ -223,7 +223,7 @@ function mostrarLinkJogar() {
     document.getElementById('link_jogar').style.display = 'block';
 }
 
-function iniciarJogo() {
+function iniciarJogoSegundaFase() {
     
     criadorInimigos.ultimoOvni = new Date().getTime();
 
@@ -235,7 +235,7 @@ function iniciarJogo() {
     document.getElementById('link_menu').style.display = 'none';
     document.getElementById('link_segundafase').style.display = 'none';
 
-    painel.pontuacao = 0;
+    painel.pontuacao = 2500;
     musicaAcao.play();
     animacao.ligar();
 }
