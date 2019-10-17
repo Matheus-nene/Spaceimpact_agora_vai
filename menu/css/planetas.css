@@ -70,32 +70,32 @@
 }
 
 .p1{
-    top: 80px;
-    left: 100px;
-    z-index: -1;
+    top: 85px;
+    left: 105px;
+    z-index: -2;
     -webkit-animation: move1 30s infinite;
 }
 .p2{
     bottom: 100px;
     right: 100px;
-    z-index: -2;
+    z-index: -3;
     -webkit-animation: move2 30s infinite;
 }
 .p3{
     bottom: 100px;
     left: 300px;
-    z-index: -3;
+    z-index: -4;
     -webkit-animation: move3 30s infinite;
 }
 .p4{
     top: 100px;
     right: 300px;
-    z-index: -4;
+    z-index: -5;
     -webkit-animation: move4 30s infinite;
 }
 .p5{
     top: -100px;
     right: -100px;
-    z-index: -5;
+    z-index: -6;
     -webkit-animation: meteoro 4s;
 }
