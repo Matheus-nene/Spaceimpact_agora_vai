@@ -5,48 +5,37 @@ body{
     overflow-x: hidden;
 }
 #link_jogar {
-
     display: none;
- 
     color: white;
-       
     font-size: 20px;
     font-family: sans-serif;
-    
     text-decoration: none;
     text-shadow: 2px 2px 5px black;
-
     position: absolute;
     left: 45%;
     top: 400px;
-
  }
  #link_menu{
     display: none;
-
     color: white;
-
     font-size: 20px;
     font-family: sans-serif;
-
     text-decoration: none;
     text-shadow: 2px 2px 5px black;
-
     position: absolute;
     left: 42%;
     top: 450px;
-
  }
  #link_segundafase{
     display: none;
 
-    color: white;
+    color: #fff;
 
     font-size: 20px;
     font-family: sans-serif;
 
     text-decoration: none;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px #000;
 
     position: absolute;
     left: 42%;
